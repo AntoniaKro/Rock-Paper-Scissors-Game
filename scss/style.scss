@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 667px;
+  width: 375px;
+  margin:auto;
+  margin-top: 20px;
+  padding: 0;
+  border: 2px solid;
+  display:grid;
+  grid-template: 150px 1fr 1fr 60px / 1fr; 
+}
+
+main {
+  overflow: scroll;
+  background: #fcfefd;
+  opacity: 20%;
+  height: 100%;
+  padding-top: 25px;
+}
+
+header {
+  background: #fcfefd;
+  padding-left: 10px;
+  grid-template-rows: 1;
+  position:relative;
+  }
+
+footer {
+  background: #30415b;
+  padding-left: 10px;
+  grid-template-rows: 6;
+  padding: 10px;
+  color: #fcfefd
+  }
+
+.user-choice, .computer-choice {
+  xmargin-top: 10px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.far {
+  color: #30415b;
+  font-size: 80px;
+  margin: auto;
+  justify-content: space-between;
+  
+}
+
+.far.active {
+    color: #bc070c;
+    transform: scale(1.3) rotate(20deg);
+}
+
+.com-icon {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.user {
+  font-size: 35px;
+  color: #30415b;
+  font-weight: bold;
+  text-align: center;
+}
+
+.choice {
+  grid-template-rows:3;
+}
+
+.far.computer {
+    transform: scale(1.5) rotate(20deg);
+}
+
+.game-name {
+    font-size: 60px;
+    color: #30415b;
+    font-weight: bold;
+    font-family: 'Londrina Shadow', cursive;
+    line-height: 1em;
+  margin-top: 10px;
+  letter-spacing: 3px;
+      
+  }
+
+.result {
+  font-size: 50px;
+  text-align: center;
+  margin: 20px;
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-family: 'Londrina Shadow', cursive;
+  color: #30415b;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.result.animate {
+  animation-name: showresult;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: 1.5;
+}
+
+.play {
+  position: absolute;
+  right: 5%;
+  top: 47%;
+  background-color: #bc070c;
+  padding:20px;
+  width: 100px;
+  height: 100px;
+  transform: rotate(26deg);
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  letter-spacing: 3px;
+}
+
+@keyframes showresult {
+  0% {transform: scale(1)}
+  50% {transform: scale(1.4)}
+  100% {transform: scale(1)}
+}
